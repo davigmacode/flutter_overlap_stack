@@ -55,36 +55,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 minSpacing: 0.5,
                 maxSpacing: 0.5,
                 itemSize: const Size(64, 32),
-                children: [
-                  Container(
+                children: List<Widget>.generate(9, (i) {
+                  return Container(
                     width: 64,
                     height: 32,
                     alignment: Alignment.center,
-                    color: Colors.amber.shade100,
+                    color: Colors.amber[(i + 1) * 100]!,
                     child: const FlutterLogo(),
-                  ),
-                  Container(
-                    width: 64,
-                    height: 32,
-                    alignment: Alignment.center,
-                    color: Colors.amber.shade300,
-                    child: const FlutterLogo(),
-                  ),
-                  Container(
-                    width: 64,
-                    height: 32,
-                    alignment: Alignment.center,
-                    color: Colors.amber.shade500,
-                    child: const FlutterLogo(),
-                  ),
-                  Container(
-                    width: 64,
-                    height: 32,
-                    alignment: Alignment.center,
-                    color: Colors.amber.shade700,
-                    child: const FlutterLogo(),
-                  ),
-                ],
+                  );
+                }),
               ),
               const SizedBox(height: 20),
               Container(
