@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:overlap_stack/overlap_stack.dart';
+import 'package:wx_avatar/wx_avatar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -67,29 +68,34 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               const SizedBox(height: 20),
               Container(
-                color: Colors.black12,
+                color: Colors.amber,
                 width: _width,
-                height: 40,
+                height: 50,
+                alignment: Alignment.center,
                 child: OverlapStack.builder(
                   minSpacing: 0.5,
                   maxSpacing: 0.8,
                   // align: OverlapStackAlign.end,
                   leadIndex: 3,
                   // infoIndex: 3,
-                  // itemSize: const Size.square(40),
+                  itemSize: const Size.square(40),
                   itemLimit: 12,
                   itemCount: 25,
                   itemBuilder: (context, i) {
-                    return CircleAvatar(
-                      foregroundImage: NetworkImage(
-                        'https://i.pravatar.cc/50?u=$i',
-                      ),
+                    return WxAvatar.circle(
+                      borderWidth: 3,
+                      borderStyle: BorderStyle.solid,
+                      borderColor: Colors.amber,
+                      backgroundColor: Colors.red,
+                      image: NetworkImage('https://i.pravatar.cc/50?u=$i'),
+                      child: const Text('Wx'),
                     );
                   },
                   infoBuilder: (context, remaining) {
-                    return CircleAvatar(
+                    return WxAvatar.circle(
+                      elevation: 3.0,
+                      foregroundSize: 11,
                       backgroundColor: Colors.red,
-                      foregroundColor: Colors.white,
                       child: Text('+$remaining'),
                     );
                   },
