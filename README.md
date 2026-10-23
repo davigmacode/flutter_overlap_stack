@@ -1,3 +1,7 @@
+# overlap_stack
+
+> [!IMPORTANT]
+> **Repository Moved to Monorepo**: Active development of $(System.Collections.Hashtable.Name) has migrated to the official [**davigmacode/flutter_wx**](https://github.com/davigmacode/flutter_wx) monorepo under [packages/overlap_stack](https://github.com/davigmacode/flutter_wx/tree/main/packages/overlap_stack).
 [![Pub Version](https://img.shields.io/pub/v/overlap_stack)](https://pub.dev/packages/overlap_stack) ![GitHub](https://img.shields.io/github/license/davigmacode/flutter_overlap_stack) [![GitHub](https://badgen.net/badge/icon/buymeacoffee?icon=buymeacoffee&color=yellow&label)](https://www.buymeacoffee.com/davigmacode) [![GitHub](https://badgen.net/badge/icon/ko-fi?icon=kofi&color=red&label)](https://ko-fi.com/davigmacode)
 
 OverlapStack intelligently stacks your widgets, allowing them to partially overlap for a compact and visually interesting layout. This space-saving solution is perfect for user lists, chat previews, or any situation where you want to showcase multiple elements without cluttering the screen.
